@@ -1,7 +1,7 @@
 "# USO" 
 
 
-git clone https://github.com/luizvilelamarques/consul-fabio-example.git
+git clone https://github.com/luizvilelamarques/vertx-loadbalance.git
 
 cd consul-fabio-example
 
