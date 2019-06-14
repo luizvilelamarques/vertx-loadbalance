@@ -7,6 +7,10 @@ cd consul-fabio-example
 
 docker-compose up -d
 
+docker-compose scale vertx=5
+
+docker-compose down
+
 
 =======
 "# vertx-loadbalance" 
