@@ -1,0 +1,26 @@
+consulx1:
+  image: consul
+  ports:
+    - "8500:8500" # GUI/management
+    
+vertx:
+  image: luizvilelamarques/consul-vertx    
+  links:
+    - consulx1
+  ports:
+    - "2222"       
+
+fabio:
+  image: fabiolb/fabio
+  volumes:
+    - $PWD/fabio/fabio.properties:/etc/fabio/fabio.properties
+  links:
+    - consulx1
+  ports:
+    - "9998:9998" # GUI/management
+    - "9999:9999" # HTTP exposed
+    
+    
+#docker-compose up -d
+#docker-compose down
+#docker-compose scale vertx=5

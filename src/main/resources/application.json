@@ -1,0 +1,12 @@
+{
+  "service-name": "task-service",
+	"discovery" : {
+		"host" : "consulx1",
+		"port" : 8500
+	},
+	"datasource" : {
+		"host" : "mysql",
+		"port" : 27017,
+		"db_name" : "test"
+	}
+}
