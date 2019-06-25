@@ -1,3 +1,10 @@
+cadvisor:
+  image: google/cadvisor
+  volumes:
+    - /var/lib/docker/:/var/lib/docker:ro
+  ports:
+    - "8080:8080" 
+    
 consulx1:
   image: consul
   ports:
